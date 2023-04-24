@@ -1,0 +1,76 @@
+/* horizontal parralax */
+:root {
+  --ruby: #e0115f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: #1f2123;
+}
+
+.card {
+  background-color: #181a1b;
+  width: 35vw;
+  height: 75vh;
+  border-radius: 50px;
+  padding: 20px;
+
+  z-index: 1;
+}
+
+.wrapper {
+  display: flex;
+  width: 600vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+
+.cont {
+  height: 100vw;
+  width: 100vh;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  height: 100vh;
+  width: 30vw;
+  background-position: center;
+}
+
+.l1 {
+  background-image: url(assets/1.jpg);
+}
+
+.l2 {
+  background-image: url(assets/2.jpg);
+}
+.l3 {
+  background-image: url(assets/3.jpg);
+}
+.l4 {
+  background-image: url(assets/4.jpg);
+}
+.l5 {
+  background-image: url(assets/5.jpg);
+}
