@@ -13,16 +13,18 @@ cont.onscroll = function () {
 
   if (w > 1500) {
     for (let i = 1; i < layers.length; i++) {
-      if (r < i + 1 && r > i) {
-        layers[i].style.left = ((r / i - 1) * i * w) / 2 + "px";
-      }
+      applyParallax(r, i, w);
     }
   } else {
     for (let i = 1; i < layers.length; i++) {
       r -= 0.5;
-      if (r < i + 1 && r > i) {
-        layers[i].style.left = ((r / i - 1) * i * w) / 2 + "px";
-      }
+      applyParallax(r, i, w);
     }
   }
 };
+
+function applyParallax(r, i, w) {
+  if (r < i + 1 && r > i) {
+    layers[i].style.left = ((r / i - 1) * i * w) / 2 + "px";
+  }
+}
